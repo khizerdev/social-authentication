@@ -23,5 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/login/{service}', [SocialLoginController::class, 'redirect']);
-Route::get('/login/{service}/callback', [SocialLoginController::class, 'callback']);
+Route::middleware(['social', 'guest'])->group(function () {
+    Route::get('/login/{service}', [SocialLoginController::class, 'redirect']);
+    Route::get('/login/{service}/callback', [SocialLoginController::class, 'callback']);
+});
