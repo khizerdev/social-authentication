@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Auth;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class SocialLoginController extends Controller
 {
@@ -36,7 +37,7 @@ class SocialLoginController extends Controller
             ]);
         }
 
-        Auth::login($user, false);
+        FacadesAuth::login($user, false);
 
         return redirect()->intended();
     }
