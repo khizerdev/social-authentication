@@ -6,11 +6,8 @@ return [
         "github" => [
             "name" => "Github"
         ],
-        "github" => [
-            "name" => "Github"
-        ],
-        "github" => [
-            "name" => "Github"
+        "facebook" => [
+            "name" => "Facebook"
         ],
     ]
 ];
