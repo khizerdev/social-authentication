@@ -14,5 +14,8 @@ return [
         "github" => [
             "created" => \App\Events\Social\GithubAccountWasLinked::class,
         ],
+        "facebook" => [
+            "created" => \App\Events\Social\FacebookAccountWasLinked::class,
+        ],
     ],
 ];
